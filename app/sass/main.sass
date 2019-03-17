@@ -13,19 +13,40 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
-.container 
-	margin: 0
-	padding: 0
+.main-container
 	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
 
-.top-menu
+@media (min-width: 576px) 
+  .main-container 
+    max-width: 540px
+
+@media (min-width: 768px) 
+  .main-container  
+    max-width: 720px
+
+@media (min-width: 992px) 
+  .main-container  
+    max-width: 960px
+
+@media (min-width: 1200px) 
+  .main-container  
+    max-width: 1140px
+
+// Custom styles
+
+header 
+	background-color: #1d2126
+	
+.header-content
 	display: flex
-	flex-direction: row
-	justify-content: space-around
+	justify-content: space-between
 	align-items: center
-	height: 65px
-	width: 100%
-	background-color: #22252B 
+	height: 65px		
+
 .link-wrapper 
 	display: flex
 	justify-content: space-around
@@ -34,7 +55,7 @@ body
 		padding-right: 10px
 		margin-left: 15px
 		border: 2px solid transparent
-		border-radius: 5.5px
+		border-radius: 4px
 		text-decoration: none
 		text-transform: uppercase
 		color: #858E8E
@@ -43,11 +64,10 @@ body
 		
 	a:hover
 		border-color: #545861
+		
 	.active
 		border-color:  #04A992 !important
 		color: #04A992 
-
-	
 	
 	
 @import "media" // Всегда в конце
