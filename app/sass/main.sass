@@ -2,38 +2,6 @@
 @import "libs"
 @import "vars"
 
-*
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
 html, body
 	height: 100%
 
@@ -45,16 +13,61 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+.main-container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
 
-.text-center
-	text-align: center
+@media (min-width: 576px) 
+  .main-container 
+    max-width: 540px
 
-::selection
-	background-color: $accent
-	color: #fff
+@media (min-width: 768px) 
+  .main-container  
+    max-width: 720px
 
+@media (min-width: 992px) 
+  .main-container  
+    max-width: 960px
+
+@media (min-width: 1200px) 
+  .main-container  
+    max-width: 1140px
+
+// Custom styles
+
+header 
+	background-color: #1d2126
+	
+.header-content
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 65px		
+
+.link-wrapper 
+	display: flex
+	justify-content: space-around
+	a 
+		padding-left: 10px
+		padding-right: 10px
+		margin-left: 15px
+		border: 2px solid transparent
+		border-radius: 4px
+		text-decoration: none
+		text-transform: uppercase
+		color: #858E8E
+		cursor: pointer
+		font-size: 12px
+		
+	a:hover
+		border-color: #545861
+		
+	.active
+		border-color:  #04A992 !important
+		color: #04A992 
+	
+	
 @import "media" // Всегда в конце
